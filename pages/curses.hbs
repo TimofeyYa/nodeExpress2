@@ -1,1 +1,20 @@
 <h1>All Course</h1>
+<pre>
+{{curses}}
+</pre>
+{{#each curses}}
+<div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{img}}">
+          <span class="card-title">{{title}}</span>
+        </div>
+        <div class="card-content">
+          <p>{{price}}</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+{{/each}}

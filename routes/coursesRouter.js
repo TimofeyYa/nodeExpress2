@@ -1,10 +1,14 @@
 const {Router} = require('express');
 const router = Router();
+const Course = require('../modules/curses')
 
-router.get('/', (req,res)=>{
+router.get('/', async (req,res)=>{
+    let curses = await Course.getAll();
+
     res.render('curses', {
         title: 'Courses',
-        isCourses: true 
+        isCourses: true,
+        curses: curses
     })
 })
 
